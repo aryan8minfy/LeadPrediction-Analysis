@@ -1,0 +1,78 @@
+
+SALES CONVERSION PREDICTION - UPDATED EDA SUMMARY REPORT
+=========================================================
+
+1. DATA OVERVIEW
+----------------
+- Dataset Shape: 9240 rows × 37 columns
+- Target Variable: 'Converted' (0 = Not Converted, 1 = Converted)
+- Total Features: 36
+
+2. MISSING VALUE ANALYSIS
+--------------------------
+- Major missing features:
+    • Lead Quality: 4767 missing
+    • Asymmetrique Activity/Profile Scores & Indexes: ~4218 missing each
+    • Tags, Lead Profile, Occupation, Country, etc. have 25-50% missing
+- Suggestion: Drop columns with high missing values or impute where meaningful
+
+3. DATA TYPES
+--------------
+- Numeric: TotalVisits, Total Time Spent on Website, Page Views Per Visit
+- Categorical: Lead Source, Origin, Specialization, Activity, etc.
+
+4. TARGET DISTRIBUTION
+-----------------------
+- Converted = 0 (Not Converted): ~61.5%
+- Converted = 1 (Converted): ~38.5%
+- Slight class imbalance, consider stratified split
+
+5. UNIVARIATE ANALYSIS
+-----------------------
+- TotalVisits, Page Views Per Visit are highly right-skewed
+- Lead Origin, Lead Source, Specialization have dominant categories
+
+6. BIVARIATE ANALYSIS
+----------------------
+- Leads with higher time spent and more visits are more likely to convert
+- Certain lead sources and last activities have higher conversion rates
+
+7. CORRELATION ANALYSIS
+------------------------
+- TotalVisits, Page Views, and Time Spent are positively correlated with each other
+- Converted is moderately correlated with Total Time Spent
+
+8. SKEWNESS ANALYSIS
+---------------------
+- Page Views Per Visit: skew = 3.22 (very high)
+- TotalVisits: skew = 1.58 (high)
+- Log transformation applied to correct skew
+
+9. OUTLIER DETECTION
+---------------------
+- IQR method applied to:
+    • TotalVisits
+    • Total Time Spent on Website
+    • Page Views Per Visit
+- Significant outliers detected and visualized using boxplots
+- Outliers removed to improve model robustness
+
+10. MULTICOLLINEARITY (VIF)
+----------------------------
+- PageViewsPerVisit_Log: VIF = 25.8 (very high)
+- TotalVisits_Log, TotalTimeSpent_Log also >10
+- These features show strong multicollinearity and are dropped
+
+11. CATEGORY SIMPLIFICATION
+----------------------------
+- Rare categories in: Lead Source, Specialization, City, Last Activity
+- Categories <1% frequency grouped as 'Other'
+
+12. FINAL CLEANING ACTIONS
+---------------------------
+- Dropped irrelevant or redundant columns based on missingness/VIF
+- Applied log transformation and outlier filtering to skewed features
+- Simplified high-cardinality categorical columns
+- Final dataset ready for modeling
+
+END OF REPORT

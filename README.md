@@ -44,7 +44,7 @@ This project presents an end-to-end machine learning pipeline that predicts the 
 - ✅ Rare categorical values grouped as `'Other'`.
 - ✅ Outliers removed using IQR method.
 
-📸 *[Add a screenshot of your EDA notebook here]*
+<img width="579" height="464" alt="image" src="https://github.com/user-attachments/assets/5a97809d-437c-41cc-aaef-29397f4701ac" />
 
 ---
 
@@ -55,7 +55,8 @@ This project presents an end-to-end machine learning pipeline that predicts the 
 - One-hot encoding on categorical features
 - Final feature matrix prepared using `ColumnTransformer`
 
-📸 *[Add schema pipeline diagram or transformation logs]*
+<img width="5400" height="900" alt="fixed_arrow_preprocessing_pipeline" src="https://github.com/user-attachments/assets/8ef00743-5efc-4240-b630-3e0679edb8e3" />
+
 
 ---
 
@@ -68,7 +69,7 @@ Models tested:
 
 All models tracked via MLflow, and the best one was saved and registered.
 
-📸 *[Add MLflow UI screenshot showing experiment comparison]*
+<img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/470f9a87-976e-42c5-8a34-42498c5e9d96" />
 
 ---
 
@@ -78,31 +79,50 @@ All models tracked via MLflow, and the best one was saved and registered.
 - Uploaded raw and processed data
 - Used by Glue jobs and Flask app
 
+---
+
 ### 🔸 2. **AWS Glue + Crawler**
 - Glue Crawler detects schema from S3 and catalogs it
 - Glue Job transforms raw data and loads to Redshift
 
-📸 *[Insert screenshot of Glue Job and Crawler success]*
+<img width="959" height="511" alt="Visual_ETL" src="https://github.com/user-attachments/assets/14610942-3c6b-4a6a-adff-5f02f1336060" />
+
+---
 
 ### 🔸 3. **Amazon Redshift**
 - Structured storage of clean tabular data
 - Used by SageMaker for training input
 
+<img width="956" height="508" alt="DataStoredInRedshift" src="https://github.com/user-attachments/assets/6158caca-3c0d-41f0-a588-8687a2a5bb83" />
+
+---
+
 ### 🔸 4. **Amazon SageMaker Studio**
 - Hosted MLflow tracking server
 - Used for training, evaluation, and registry
+
+<img width="959" height="518" alt="MLFlowInStudio 225946" src="https://github.com/user-attachments/assets/131bd64a-e034-4d3e-afa7-c5d7df39fa00" />
+
+<img width="959" height="527" alt="MLFlowAWS" src="https://github.com/user-attachments/assets/781647b5-de77-437f-94c3-994839890075" />
+
+---
 
 ### 🔸 5. **MLflow Registry**
 - Logged all models
 - Registered best model and transitioned to Staging
 
-📸 *[Insert screenshot of MLflow model registry]*
+<img width="959" height="504" alt="BestModelRegisteredMLFlow" src="https://github.com/user-attachments/assets/99ce6fb4-4e60-4a3d-b5f8-a758eb35ef9c" />
+
 
 ### 🔸 6. **Flask Deployment**
 - Flask app serves prediction via REST endpoint
 - Uses latest `.pkl` model artifact from S3
 
-📸 *[Screenshot of prediction form or response sample]*
+<img width="959" height="544" alt="FlaskDeploymentAWS" src="https://github.com/user-attachments/assets/3d9fc474-68dd-4a97-97e1-b882ed72ac1a" />
+
+<img width="959" height="539" alt="FlaskAppAWS" src="https://github.com/user-attachments/assets/46f4fdfa-3bb0-46c8-b6cc-592351edcc26" />
+
+---
 
 ### 🔸 7. **Apache Airflow (MWAA)**
 - Orchestrates full pipeline:
@@ -111,7 +131,7 @@ All models tracked via MLflow, and the best one was saved and registered.
     - Branching: alert or redeploy
 - Dynamically runs Python scripts from S3
 
-📸 *[Airflow DAG screenshot + logs from drift check or model training]*
+<img width="959" height="539" alt="AirflowComplete" src="https://github.com/user-attachments/assets/de1bc3d0-ec6e-4efa-813e-2e5afc601547" />
 
 ---
 
@@ -121,7 +141,13 @@ All models tracked via MLflow, and the best one was saved and registered.
 - If drift detected, model retraining is triggered
 - Drift reports (JSON + HTML via Evidently) are saved in S3
 
-📸 *[Attach drift report sample or HTML dashboard]*
+<img width="470" height="480" alt="image" src="https://github.com/user-attachments/assets/67eb4c73-29d3-43e1-bf09-2835d356ee81" />
+
+---
+
+### AWS Architecture
+
+<img width="1024" height="1024" alt="ChatGPT Image Jul 20, 2025, 11_59_48 PM" src="https://github.com/user-attachments/assets/157a6e15-8039-4670-a8c7-000a3c9164bf" />
 
 ---
 
@@ -166,4 +192,4 @@ sales-conversion-prediction/
 
 ## 📧 Contact / Deployment Readiness
 
-This solution is client-ready and easily deployable in any AWS cloud setup using S3, SageMaker, and MWAA. For further inquiries or support, please open an issue or contact [YourName/Team].
+This solution is client-ready and easily deployable in any AWS cloud setup using S3, SageMaker, and MWAA. For further inquiries or support, please open an issue or contact.

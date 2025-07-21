@@ -149,6 +149,9 @@ All models tracked via MLflow, and the best one was saved and registered.
 
 <img width="1024" height="1024" alt="ChatGPT Image Jul 20, 2025, 11_59_48 PM" src="https://github.com/user-attachments/assets/157a6e15-8039-4670-a8c7-000a3c9164bf" />
 
+<img width="1655" height="3844" alt="Untitled diagram _ Mermaid Chart-2025-07-21-054418" src="https://github.com/user-attachments/assets/54cade26-0cd7-4081-9866-b3923710289a" />
+
+
 ---
 
 ## 🔁 Folder Structure

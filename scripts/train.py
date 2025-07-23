@@ -144,6 +144,10 @@ def main():
             os.makedirs("/usr/local/airflow/tmp", exist_ok=True)
             model_path = f"/usr/local/airflow/tmp/best_model_{best_name}.pkl"
             joblib.dump(best_model, model_path)
+
+            # ✅ Also save default model path for reuse in prediction
+            joblib.dump(best_model, "/usr/local/airflow/tmp/best_model.pkl")
+
             print(f"\n🏆 Best Model: {best_name} (F1: {best_f1:.4f})")
             print(f"📦 Saved to: {model_path}")
 
@@ -160,3 +164,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

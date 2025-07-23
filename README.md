@@ -131,7 +131,8 @@ All models tracked via MLflow, and the best one was saved and registered.
     - Branching: alert or redeploy
 - Dynamically runs Python scripts from S3
 
-<img width="959" height="539" alt="AirflowComplete" src="https://github.com/user-attachments/assets/de1bc3d0-ec6e-4efa-813e-2e5afc601547" />
+<img width="959" height="541" alt="image" src="https://github.com/user-attachments/assets/b3943411-f119-4891-81f0-fe657315b854" />
+
 
 ---
 
